@@ -1,66 +1,26 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-	<meta content="initial-scale=1, maximum-scale=1,
-				user-scalable=0" name="viewport" />
-	<meta name="viewport" content="width=device-width" />
-
-	<!--Datatable plugin CSS file -->
-	<link rel="stylesheet" href=
-"https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css" />
-
-	<!--jQuery library file -->
-	<script type="text/javascript" src=
-		"https://code.jquery.com/jquery-3.5.1.js">
-	</script>
-
-	<!--Datatable plugin JS library file -->
-	<script type="text/javascript" src=
-"https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js">
-	</script>
-</head>
-
-<body>
-	<h2>Searchable collection of NCBI GEO Datasets</h2>
-
-	<!--HTML table with student data-->
-	<table id="tableID" class="display"
-		style="width: 100%;">
-		<thead>
-			<tr>
-				<th>Accession</th>
-				<th>Title</th>
-				<th>Summary</th>
-				<th>Organism</th>
-				<th>Platform</th>
-                <th>Publications</th>
-				<th>Download link</th>
-			</tr>
-		</thead>
-		<tfoot>
-			<!-- <tr>
-				<th>StudentID</th>
-				<th>StudentName</th>
-				<th>Age</th>
-				<th>Gender</th>
-				<th>Marks Scored</th>
-			</tr> -->
-		</tfoot>
-	</table>
-
-	<script>
-	
-		/* Initialization of datatable */
-		$(document).ready(function () {
-
-			/* Student's data loaded from
-			text file */
-			$('#tableID').DataTable({
-				"ajax": 'geoinfo.json'
-			});
-		});
-	</script>
-</body>
-
-</html>
+<div class="row">
+  <div id="admin" class="col s12">
+    <div class="card material-table">
+      <div class="table-header">
+        <span class="table-title">Single Cell Datasets</span>
+        <div class="actions">
+          <!-- <a href="#add_users" class="modal-trigger waves-effect btn-flat nopadding"><i class="material-icons">person_add</i></a> -->
+          <a href="#" class="search-toggle waves-effect btn-flat nopadding"><i class="material-icons">search</i></a>
+        </div>
+      </div>
+      <table id="datatable">
+        <thead>
+          <tr>
+            <th>Accession</th>
+            <th>Title</th>
+            <th>Summary</th>
+            <th>Organism</th>
+            <th>Platform</th>
+            <th>Publications</th>
+            <th>Link</th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+  </div>
+</div>
